@@ -6,13 +6,17 @@ console.log(table[user, usrId, isStudent]);
 // use for table formate print 
 
 
+/* when you declering any varibale mostly cases use let and const
+var not use becouse of they have some issu when you create many variable form var */
+
+
 
 // premetive datatypes
 let fristName = 'vivan';
 fristName = 'rahul'; // update name.
 console.log(fristName); // print something.
 console.log(typeof (fristName)); // type of variable. "string"
-
+;
 const age = 20;
 // age = 25; // Not Update, show error.
 console.log(age); // Output 20
