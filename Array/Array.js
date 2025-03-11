@@ -135,6 +135,137 @@ newNumbers.forEach(num => {
 });
 console.log(sum); // 100 itearted each element and add in sum variable
 
+let newFruits = ["Apple", "Banana", "Cherry"];
+console.log(newFruits.includes('Cherry'))  //cheac if the element exist in array return true/ false
+
+console.log(newFruits.reverse()) // reverse Array 
+
+let num1 = [1, 2, 2, 4, 6, 3, 5]
+console.log(num1.sort()) // [1, 2, 2, 3, 4, 5, 6] // sort the array in count formate
+
+console.log(num1.slice(1, 4)) //[ 2, 2, 3 ], Extract the partion of the array
+
+// The concat() method merges two or more arrays and returns a new array without modifying the original arrays.
+
+// Sintax concat() methods
+// let newArray = array1.concat(array2, array3, ...);
+let margeArr = newFruits.concat(num1);
+console.log(margeArr) // [ 'Cherry', 'Banana', 'Apple', 1, 2, 2, 3, 4, 5, 6 ] 
+
+let arr2 = [1, 2, 3];
+let arr3 = [4, 5, 6];
+
+let merged = [...arr2, ...arr3]; // sprede oprater
+console.log(merged); // [1, 2, 3, 4, 5, 6]
+
+console.log(newFruits.join()) // Cherry,Banana,Apple : convert array to string
 
 
+// The find() method returns the first element in an array that satisfies a given condition. If no element matches, it returns undefined.
 
+// Sintax of find()
+// let result = array.find(callback(currentValue, index, array));
+
+let num2 = [1, 3, 5, 8, 10];
+
+let firstEven = num2.find(num => num % 2 === 0);
+console.log(firstEven); // 8 
+
+let userObj = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" }
+];
+
+let findUser = userObj.find(u => u.id === 2);
+console.log(findUser); // { id: 2, name: "Bob" }
+
+
+// The findIndex() method returns the index of the first element that satisfies a given condition. If no element matches, it returns -1.
+
+// Sintax of findIndex()
+// let index = array.findIndex(callback(currentValue, index, array));
+
+let numbersArr = [1, 3, 5, 8, 10];
+
+let index = numbersArr.findIndex(num => num % 2 === 0);
+console.log(index); // 3
+
+let fruitsArr = ["apple", "banana", "mango"];
+let findFruit = fruits.findIndex(fruit => fruit === "orange");
+console.log(findFruit); // -1
+
+// The reduce() method reduces an array to a single value by applying a function to each element.
+
+// Sintax of reduce()
+// let result = array.reduce(callback(accumulator, currentValue, index, array), initialValue);
+
+let numbersArray = [1, 2, 3, 4, 5];
+
+let sumArr = numbersArray.reduce((acc, num) => acc + num, 0);
+console.log(sumArr); // 15, Adds all numbers in the array (1 + 2 + 3 + 4 + 5 = 15).
+
+
+let numbersMax = [10, 25, 5, 40, 30];
+
+let findMax = numbersMax.reduce((acc, num) => Math.max(acc, num), -Infinity);
+console.log(findMax); // 40
+
+
+// The some() method checks if at least one element in an array satisfies a given condition and returns true or false.
+
+//Sintax of some()
+// let result = array.some(callback(currentValue, index, array));
+
+let hasEven = numbersArr.some(num => num % 2 === 0);
+console.log(hasEven); // true
+
+let products = [
+    { name: "Laptop", price: 1000 },
+    { name: "Phone", price: 500 },
+    { name: "Tablet", price: 700 }
+];
+
+let isExpensive = products.some(product => product.price > 900);
+console.log(isExpensive); // true
+
+
+// The every() method checks if all elements in an array satisfy a given condition. If all elements match, it returns true; otherwise, it returns false.
+
+// Sintax of every()
+// let result = array.every(callback(currentValue, index, array));
+let allEvennumbers = [2, 4, 6, 8];
+
+let allEven = allEvennumbers.every(num => num % 2 === 0);
+console.log(allEven); // true
+
+let words = ["apple", "banana", "cherry"];
+
+let allLongWords = words.every(word => word.length > 3);
+console.log(allLongWords); // true
+
+
+// The flat() method flattens a nested array into a single-level array.
+
+//Sintax of flat()
+// let newArray = array.flat(depth);
+
+let mixNumbers = [1, 2, [3, 4], [5, 6]];
+
+let flatArray = mixNumbers.flat();
+console.log(flatArray); // [1, 2, 3, 4, 5, 6]
+
+let arrX = new Array(5).fill("X");
+console.log(arrX); // ["X", "X", "X", "X", "X"]
+
+// The at() method retrieves an element from an array using positive or negative indexing.
+
+// Sintax of at()
+// let element = array.at(index);
+
+let possitiveNumbers = [10, 20, 30, 40, 50];
+console.log(possitiveNumbers.at(2)); // 30 stat count
+
+console.log(possitiveNumbers.at(-1)); // 50 reverse count
+
+// at(), support negative index
